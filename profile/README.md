@@ -4,7 +4,7 @@
 
 ### Free, open-source, multilingual AI education for everyone
 
-[![Website](https://img.shields.io/badge/Website-ai--seeds.vercel.app-0071e3?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-seeds.vercel.app)
+[![Website](https://img.shields.io/badge/Website-open--ai--school.vercel.app-0071e3?style=for-the-badge&logo=vercel&logoColor=white)](https://open-ai-school.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-30d158?style=for-the-badge)](https://github.com/open-ai-school/ai-seeds/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/open-ai-school/ai-seeds?style=for-the-badge&color=ff9f0a)](https://github.com/open-ai-school/ai-seeds)
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20Us-purple?style=for-the-badge&logo=github)](https://github.com/open-ai-school/ai-seeds/discussions)
@@ -36,7 +36,7 @@ Open AI School changes that. We start from the very basics and build understandi
 
 ## 🚀 Get Started
 
-Visit **[ai-seeds.vercel.app](https://ai-seeds.vercel.app)** and start your first lesson — it takes 10 minutes!
+Visit **[open-ai-school.vercel.app](https://open-ai-school.vercel.app)** and start your first lesson — it takes 10 minutes!
 
 ## 🤝 Contributing
 
