@@ -36,44 +36,43 @@ Open AI School changes that. We start from the very basics and build understandi
 
 ## 🤖 Automated Workflow Pipeline
 
-All repos in this org use a fully automated GitHub Actions pipeline. When you open an issue, bots handle triage, planning, sub-issue creation, PR drafting, code review, and cleanup — so contributors can focus on code.
+All repos in this org use a fully automated GitHub Actions pipeline. Maintainer adds a single `ready` label — bots handle the rest.
 
 ```mermaid
 flowchart TD
     A["🆕 Issue Opened"] --> B["🏷️ Triage Bot"]
-    B -->|"auto-labels, priority P0-P3, size"| C{"Maintainer adds\n'needs-plan' label"}
-    C --> D["📋 Planner Bot"]
-    D -->|"generates implementation\nplan as comment"| E{"Maintainer adds\n'planned' label"}
-    E --> F["👹 Issue Monster"]
-    F -->|"creates linked\nsub-issues from plan"| G{"Maintainer adds\n'ready-for-dev' label"}
-    G --> H["🚀 Draft PR Creator"]
-    H -->|"creates branch +\ndraft PR"| I["👩‍💻 Human pushes code"]
-    I --> J["Marks PR Ready for Review"]
-    J --> K["🔍 Auto-Review Bot"]
-    K -->|"size labels, test check,\nwarnings posted"| L{"Maintainer approves PR"}
-    L --> M["✅ Merge Helper"]
-    M -->|"labels 'ready-to-merge'"| N["👩‍💻 Human merges"]
-    N --> O["🔗 Sub-issue Closer"]
-    O -->|"closes linked issues\nvia 'Closes #N'"| P["🎯 Plan Closer"]
-    P -->|"closes parent issue when\nall sub-issues done"| Q["✨ Done!"]
+    B -->|"auto-labels: category,\npriority P0-P3, size"| C["Issue is triaged"]
+    C --> D{"Maintainer reviews\nand adds 'ready' label"}
+    D --> E["🚀 Pipeline Bot"]
+    E -->|"posts plan + creates\nbranch + draft PR"| F["👩‍💻 Human pushes code"]
+    F --> G["Marks PR Ready for Review"]
+    G --> H["🔍 Auto-Review Bot"]
+    H -->|"size labels, test check,\nwarnings posted"| I{"Maintainer approves PR"}
+    I --> J["✅ Merge Helper"]
+    J -->|"labels 'ready-to-merge'"| K["👩‍💻 Human merges"]
+    K --> L["🔗 Sub-issue Closer"]
+    L -->|"closes linked issues\nvia 'Closes #N'"| M["🎯 Plan Closer"]
+    M -->|"closes parent when\nall sub-issues done"| N["✨ Done!"]
 
-    R["⏰ Weekly Cron"] --> S["🧹 Stale Bot"]
-    S -->|"marks stale after 30d\ncloses after 14 more"| T["Keeps backlog clean"]
+    O["⏰ Weekly Cron"] --> P["🧹 Stale Bot"]
+    P -->|"marks stale after 30d\ncloses after 14 more"| Q["Keeps backlog clean"]
+
+    R["⏰ Weekly Cron"] --> S["🧪 E2E Test Bot"]
+    S -->|"Playwright tests live site\ncreates issues for failures"| T["Real bugs caught"]
 
     U["🆕 First-time Contributor"] --> V["👋 Welcome Bot"]
     V -->|"welcome message +\nguidance"| W["Contributor feels at home"]
 
     style A fill:#4CAF50,color:#fff
-    style Q fill:#4CAF50,color:#fff
+    style N fill:#4CAF50,color:#fff
     style B fill:#2196F3,color:#fff
-    style D fill:#2196F3,color:#fff
-    style F fill:#FF5722,color:#fff
-    style H fill:#9C27B0,color:#fff
-    style K fill:#FF9800,color:#fff
-    style M fill:#4CAF50,color:#fff
-    style O fill:#607D8B,color:#fff
-    style P fill:#607D8B,color:#fff
-    style S fill:#795548,color:#fff
+    style E fill:#9C27B0,color:#fff
+    style H fill:#FF9800,color:#fff
+    style J fill:#4CAF50,color:#fff
+    style L fill:#607D8B,color:#fff
+    style M fill:#607D8B,color:#fff
+    style P fill:#795548,color:#fff
+    style S fill:#E91E63,color:#fff
     style V fill:#E91E63,color:#fff
 ```
 
@@ -82,17 +81,16 @@ flowchart TD
 | Bot | Trigger | What it does |
 |-----|---------|-------------|
 | 🏷️ **Triage** | Issue opened | Auto-labels (`bug`, `feature`, `docs`), sets priority (`P0`–`P3`), adds size label |
-| 📋 **Planner** | `needs-plan` label | Generates step-by-step implementation plan as a comment |
-| 👹 **Issue Monster** | `planned` label | Parses plan checklist, creates linked sub-issues |
-| 🚀 **Draft PR Creator** | `ready-for-dev` label | Creates feature branch + draft PR linked to issue |
+| 🚀 **Pipeline** | `ready` label | Posts implementation plan, creates feature branch + draft PR |
 | 🔍 **Auto-Review** | PR ready for review | Posts size stats, checks for tests/docs, adds warnings |
 | ✅ **Merge Helper** | PR approved + checks pass | Labels `ready-to-merge` for human to merge |
 | 🔗 **Sub-issue Closer** | PR merged | Closes issues referenced with `Closes #N` |
 | 🎯 **Plan Closer** | Sub-issue closed | Closes parent when all sub-issues are done |
+| 🧪 **E2E Test** | Weekly (Sundays) | Playwright tests every page of the live site, creates issues for failures |
 | 🧹 **Stale Bot** | Weekly cron | Marks inactive issues/PRs stale, closes after 14 days |
 | 👋 **Welcome Bot** | First issue/PR | Welcomes new contributors with guidance |
 
-> 💡 All workflows use **concurrency groups** with `cancel-in-progress: true` — new commits automatically cancel outdated runs.
+> 💡 All workflows use **per-issue/per-PR concurrency groups** — no race conditions, no cancelled builds.
 
 ## 🚀 Get Started
 
@@ -112,7 +110,7 @@ Check out our [contribution guide](https://github.com/open-ai-school/ai-seeds/bl
 
 ## 👨‍💻 Built By
 
-**[Ramesh Reddy Adutla](https://github.com/rameshreddy-adutla)** — Staff Software Engineer with 14+ years of experience, passionate about making AI education accessible to everyone.
+**[Ramesh Reddy Adutla](https://github.com/rameshreddy-adutla)** — Staff Software Engineer based in London, passionate about making AI education accessible to everyone.
 
 - 🔗 [LinkedIn](https://linkedin.com/in/rameshreddy-adutla)
 - ☕ [Buy Me a Coffee](https://buymeacoffee.com/rameshreddyadutla)
