@@ -4,14 +4,14 @@
 
 ### Free, open-source, multilingual AI education for everyone
 
-[![Website](https://img.shields.io/badge/Website-open--ai--school.vercel.app-0071e3?style=for-the-badge&logo=vercel&logoColor=white)](https://open-ai-school.vercel.app)
-[![License](https://img.shields.io/badge/License-MIT-30d158?style=for-the-badge)](https://github.com/open-ai-school/ai-seeds/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/open-ai-school/ai-seeds?style=for-the-badge&color=ff9f0a)](https://github.com/open-ai-school/ai-seeds)
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20Us-purple?style=for-the-badge&logo=github)](https://github.com/open-ai-school/ai-seeds/discussions)
+[![Website](https://img.shields.io/badge/Website-open--ai--school.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://open-ai-school.vercel.app)
+[![npm](https://img.shields.io/npm/v/@open-ai-school/ai-ui-library?style=for-the-badge&color=f59e0b&label=UI%20Library)](https://www.npmjs.com/package/@open-ai-school/ai-ui-library)
+[![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/open-ai-school/ai-platform/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/open-ai-school?style=for-the-badge&color=ff9f0a)](https://github.com/open-ai-school)
 
 ---
 
-**Learn AI from zero — no coding experience, no math degree, no jargon.**
+**Learn AI from zero — no coding, no maths, no jargon.**
 
 🌍 Available in **English** · **Français** · **Nederlands** · **हिन्दी** · **తెలుగు** · *more coming soon!*
 
@@ -19,20 +19,48 @@
 
 ## 🌱 Our Mission
 
-We believe AI education should be **free**, **accessible**, and **available in your language**. Too many learners — especially in India and the Global South — are left behind because quality AI resources are in English, behind paywalls, or assume prior technical knowledge.
+AI education should be **free**, **accessible**, and **available in your language**. Too many learners — especially in the Global South — are left behind because quality AI resources are in English, behind paywalls, or assume prior technical knowledge.
 
-Open AI School changes that. We start from the very basics and build understanding step by step, using everyday language and real-world analogies.
+Open AI School starts from the very basics and builds understanding step by step, using everyday language and real-world analogies.
 
-## 📚 What We Offer
+## 🗺️ Learning Path
 
-| | Feature | Description |
-|---|---|---|
-| 🌱 | **Beginner-First** | No prerequisites — we start from "What is AI?" |
-| 🌍 | **Multilingual** | Content in 5+ languages and growing |
-| �� | **Interactive** | Hands-on AI Playground with TensorFlow.js |
-| 💝 | **100% Free** | No paywalls, no subscriptions, ever |
-| 🔓 | **Open Source** | All code and content on GitHub |
-| 📱 | **Mobile Friendly** | Learn on any device |
+```
+🌱 AI Seeds       →  Absolute beginners, zero experience
+🌿 AI Sprouts     →  Foundations & core concepts (coming soon)
+🌳 AI Branches    →  Applied AI & real-world use cases (coming soon)
+🏕️ AI Canopy      →  Advanced topics & specialisation (coming soon)
+🌲 AI Forest      →  Expert-level, research & contribution (coming soon)
+```
+
+## 📦 Repository Map
+
+| Repo | Role | Description |
+|------|------|-------------|
+| [`ai-platform`](https://github.com/open-ai-school/ai-platform) | 🌐 App Shell | Next.js 16, React 19, i18n, auth, routing — the deployed site |
+| [`ai-ui-library`](https://github.com/open-ai-school/ai-ui-library) | 🎨 Design System | Shared components on [npm](https://www.npmjs.com/package/@open-ai-school/ai-ui-library) — Button, Card, ThemeToggle, animations |
+| [`ai-seeds`](https://github.com/open-ai-school/ai-seeds) | 🌱 Level 1 Content | MDX lessons for absolute beginners |
+| [`gitsage`](https://github.com/open-ai-school/gitsage) | 🧙 Dev Tool | RAG-powered GitHub org bot — Java 21, LangChain4j, pgvector |
+| [`spring-boot-mcp-starter`](https://github.com/open-ai-school/spring-boot-mcp-starter) | 🔌 Dev Tool | Spring Boot starter for Model Context Protocol |
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────┐
+│                  ai-platform                     │
+│         Next.js app shell (deployed)             │
+│    routing · auth · i18n · program registry      │
+├────────────────────┬────────────────────────────┤
+│   ai-ui-library    │      Content Repos          │
+│  (npm package)     │  ┌──────────────────────┐   │
+│                    │  │ 🌱 ai-seeds          │   │
+│  Button · Card     │  │ 🌿 ai-sprouts       │   │
+│  Badge · Theme     │  │ 🌳 ai-branches      │   │
+│  ScrollReveal      │  │ 🏕️ ai-canopy        │   │
+│  Animations        │  │ 🌲 ai-forest        │   │
+│                    │  └──────────────────────┘   │
+└────────────────────┴────────────────────────────┘
+```
 
 ## 🚀 Get Started
 
@@ -40,27 +68,17 @@ Visit **[open-ai-school.vercel.app](https://open-ai-school.vercel.app)** and sta
 
 ## 🤝 Contributing
 
-We welcome contributions from everyone! Here's how you can help:
+We welcome contributions from everyone:
 
-- 🌍 **Translate** — Add your language ([see open issues](https://github.com/open-ai-school/ai-seeds/labels/good%20first%20issue))
+- 🌍 **Translate** — Add your language to any content repo
 - ✍️ **Write lessons** — Share your AI knowledge
-- 💻 **Code** — Dark mode, new features, AI demos
+- 🧩 **Build components** — Contribute to the UI library
+- 💻 **Code** — Features, fixes, new programs
 - 📣 **Share** — Tell your friends, classmates, communities
-- 💬 **Discuss** — Join our [Discussions](https://github.com/open-ai-school/ai-seeds/discussions)
 
-> 📖 See our [Contributing Guide](https://github.com/open-ai-school/.github/blob/main/CONTRIBUTING.md) for how our automated pipeline works.
+## 👨‍💻 Built By
 
-## 📦 Our Repos
-
-| Repo | Description |
-|------|-------------|
-| [**ai-seeds**](https://github.com/open-ai-school/ai-seeds) | 🌱 The main platform — free, multilingual AI lessons with interactive TensorFlow.js demos |
-| [**gitsage**](https://github.com/open-ai-school/gitsage) | 🧙 RAG-powered bot that indexes your GitHub org for Copilot Chat. Java 21, LangChain4j, pgvector |
-| [**spring-boot-mcp-starter**](https://github.com/open-ai-school/spring-boot-mcp-starter) | 🔌 Spring Boot starter for the Model Context Protocol (MCP) |
-
-## ��‍💻 Built By
-
-[**@rameshreddy-adutla**](https://github.com/rameshreddy-adutla) · [LinkedIn](https://linkedin.com/in/rameshreddy-adutla) · [☕ Buy Me a Coffee](https://buymeacoffee.com/rameshreddyadutla)
+[**@rameshreddy-adutla**](https://github.com/rameshreddy-adutla) — Tech Lead, 14 years experience · London
 
 ---
 
