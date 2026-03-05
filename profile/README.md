@@ -29,7 +29,7 @@ Open AI School changes that. We start from the very basics and build understandi
 |---|---|---|
 | 🌱 | **Beginner-First** | No prerequisites — we start from "What is AI?" |
 | 🌍 | **Multilingual** | Content in 5+ languages and growing |
-| 🧪 | **Interactive** | Hands-on AI Playground with TensorFlow.js |
+| �� | **Interactive** | Hands-on AI Playground with TensorFlow.js |
 | 💝 | **100% Free** | No paywalls, no subscriptions, ever |
 | 🔓 | **Open Source** | All code and content on GitHub |
 | 📱 | **Mobile Friendly** | Learn on any device |
@@ -48,9 +48,17 @@ We welcome contributions from everyone! Here's how you can help:
 - 📣 **Share** — Tell your friends, classmates, communities
 - 💬 **Discuss** — Join our [Discussions](https://github.com/open-ai-school/ai-seeds/discussions)
 
-> 📖 See our [Contributing Guide](https://github.com/open-ai-school/.github/blob/main/CONTRIBUTING.md) for how the automated pipeline works.
+> 📖 See our [Contributing Guide](https://github.com/open-ai-school/.github/blob/main/CONTRIBUTING.md) for how our automated pipeline works.
 
-## 👨‍💻 Built By
+## 📦 Our Repos
+
+| Repo | Description |
+|------|-------------|
+| [**ai-seeds**](https://github.com/open-ai-school/ai-seeds) | 🌱 The main platform — free, multilingual AI lessons with interactive TensorFlow.js demos |
+| [**gitsage**](https://github.com/open-ai-school/gitsage) | 🧙 RAG-powered bot that indexes your GitHub org for Copilot Chat. Java 21, LangChain4j, pgvector |
+| [**spring-boot-mcp-starter**](https://github.com/open-ai-school/spring-boot-mcp-starter) | 🔌 Spring Boot starter for the Model Context Protocol (MCP) |
+
+## ��‍💻 Built By
 
 [**@rameshreddy-adutla**](https://github.com/rameshreddy-adutla) · [LinkedIn](https://linkedin.com/in/rameshreddy-adutla) · [☕ Buy Me a Coffee](https://buymeacoffee.com/rameshreddyadutla)
 
