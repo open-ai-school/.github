@@ -4,7 +4,7 @@
 
 ### Free, open-source, multilingual AI education for everyone
 
-[![Website](https://img.shields.io/badge/Website-open--ai--school.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://open-ai-school.vercel.app)
+[![Website](https://img.shields.io/badge/Website-open--ai--school.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://openaischool.vercel.app)
 [![npm](https://img.shields.io/npm/v/@open-ai-school/ai-ui-library?style=for-the-badge&color=f59e0b&label=UI%20Library)](https://www.npmjs.com/package/@open-ai-school/ai-ui-library)
 [![License](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](https://github.com/open-ai-school/ai-platform/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/open-ai-school?style=for-the-badge&color=ff9f0a)](https://github.com/open-ai-school)
@@ -64,7 +64,7 @@ Open AI School starts from the very basics and builds understanding step by step
 
 ## 🚀 Get Started
 
-Visit **[open-ai-school.vercel.app](https://open-ai-school.vercel.app)** and start your first lesson — it takes 10 minutes!
+Visit **[openaischool.vercel.app](https://openaischool.vercel.app)** and start your first lesson — it takes 10 minutes!
 
 ## 🤝 Contributing
 
