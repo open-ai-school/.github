@@ -110,10 +110,7 @@ Check out our [contribution guide](https://github.com/open-ai-school/ai-seeds/bl
 
 ## 👨‍💻 Built By
 
-**[Ramesh Reddy Adutla](https://github.com/rameshreddy-adutla)** — Staff Software Engineer based in London, passionate about making AI education accessible to everyone.
-
-- 🔗 [LinkedIn](https://linkedin.com/in/rameshreddy-adutla)
-- ☕ [Buy Me a Coffee](https://buymeacoffee.com/rameshreddyadutla)
+[**@rameshreddy-adutla**](https://github.com/rameshreddy-adutla) · [LinkedIn](https://linkedin.com/in/rameshreddy-adutla) · [☕ Buy Me a Coffee](https://buymeacoffee.com/rameshreddyadutla)
 
 ---
 
